@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="img/fav.png">
+    <!-- Bootstrap CSS -->
+    <link href="./assets/css/bootstrap.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+    <title>Sahabat Teknik</title>
+  </head>
+  <body>
+    <!-- Start Content Voucher -->
+    <div class="wrapper">
+      <div class="text-center mt-5 name">Dapatkan Voucher</div>
+      <div class="form-field d-flex align-items-center">
+        <span class="far fa-user"></span>
+        <input type="text" id="voucherInput" readonly>
+      </div>
+      <button class="btn mt-3" onclick="generateVoucher()">Get</button>
+      <a href="index.html">
+        <button class="btn mt-3">Back</button>
+      </a>
+    </div>
+    <!-- End Content Voucher-->
+  </body>
+  <script>
+    function generateVoucher() {
+      // Array sample data
+      var vouchers = ["ABCDE01", "FGHIJ02", "KLMNO03", "PQRST04", "UVWXYZ05", "abcde06", "fghij07", "klmno08", "pqrst09", "uvwxyz10"];
+      // Untuk Mendapatkan index acak
+      var randomIndex = Math.floor(Math.random() * vouchers.length);
+      // Untuk Mendapatkan voucher dari Array menggunakan index acak
+      var randomVoucher = vouchers[randomIndex];
+      // Set the voucher in the input field
+      document.getElementById("voucherInput").value = randomVoucher;
+    }
+  </script>
+</html>
