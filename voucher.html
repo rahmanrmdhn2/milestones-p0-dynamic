@@ -23,17 +23,20 @@
       </a>
     </div>
     <!-- End Content Voucher-->
+
+    <!-- Start Javascript -->
+    <script>
+      function generateVoucher() {
+        // Array sample data
+        var vouchers = ["ABCDE01", "FGHIJ02", "KLMNO03", "PQRST04", "UVWXYZ05", "abcde06", "fghij07", "klmno08", "pqrst09", "uvwxyz10"];
+        // Untuk Mendapatkan index acak
+        var randomIndex = Math.floor(Math.random() * vouchers.length);
+        // Untuk Mendapatkan voucher dari Array menggunakan index acak
+        var randomVoucher = vouchers[randomIndex];
+        // Set the voucher in the input field
+        document.getElementById("voucherInput").value = randomVoucher;
+      }
+    </script>
+    <!-- End Javascript -->
   </body>
-  <script>
-    function generateVoucher() {
-      // Array sample data
-      var vouchers = ["ABCDE01", "FGHIJ02", "KLMNO03", "PQRST04", "UVWXYZ05", "abcde06", "fghij07", "klmno08", "pqrst09", "uvwxyz10"];
-      // Untuk Mendapatkan index acak
-      var randomIndex = Math.floor(Math.random() * vouchers.length);
-      // Untuk Mendapatkan voucher dari Array menggunakan index acak
-      var randomVoucher = vouchers[randomIndex];
-      // Set the voucher in the input field
-      document.getElementById("voucherInput").value = randomVoucher;
-    }
-  </script>
 </html>
